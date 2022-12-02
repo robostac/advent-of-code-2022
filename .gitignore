@@ -3,3 +3,4 @@ input*
 target/
 Cargo.lock
 .vscode
+test.*
