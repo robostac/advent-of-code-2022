@@ -132,42 +132,4 @@ fn main() {
         bv = std::cmp::max(bv, v);
     }
     println!("{}", bv);
-    // for i in 0..30 {
-    //     let mut v = HashMap::new();
-    //     std::mem::swap(&mut v, &mut current[i]);
-    //     for ((pos, epos, mask, released), releasing) in v {
-    //         best = std::cmp::max(best, released + (current.len() - i) as i64 * releasing);
-    //         for p in 0..valves.len() {
-    //             if valves[p].rate == 0 {
-    //                 continue;
-    //             }
-    //             if (mask & (1 << p)) > 0 {
-    //                 continue;
-    //             }
-    //             for p2 in 0..valves.len() {
-    //                 if p2 == p {
-    //                     continue;
-    //                 }
-    //                 if valves[p2].rate == 0 {
-    //                     continue;
-    //                 }
-    //                 if (mask & (1 << p2)) > 0 {
-    //                     continue;
-    //                 }
-    //                 let d = dist[pos][p] + 1;
-    //                 let next_time = i + d;
-    //                 if next_time >= current.len() {
-    //                     continue;
-    //                 }
-    //                 let k = (p, mask | 1 << p, released + (d as i64 * releasing));
-    //                 let e = current[next_time].entry(k).or_insert(0);
-    //                 let tgt = releasing + valves[p].rate;
-    //                 if tgt > *e {
-    //                     *e = tgt;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     println!("best {} {}", i + 1, best);
-    // }
 }
