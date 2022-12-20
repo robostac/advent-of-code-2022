@@ -125,9 +125,10 @@ fn main() {
 
                 let mut v = 0;
                 for y in top..(top + 5) {
+                    let yy = (y - top).abs();
                     for x in 0..7 {
                         if grid.contains(&(x, y)) {
-                            v |= 1 << (x + 7 * y);
+                            v |= 1i64 << (x + 7 * yy);
                         }
                     }
                 }
