@@ -51,7 +51,7 @@ fn insert_node_right(nodes: &mut Vec<Node>, idx: usize, insert_pos: usize) {
 
 fn move_node(nodes: &mut Vec<Node>, idx: usize, p: i64) {
     remove_node(nodes, idx);
-    let mut p = p;
+    let mut p = p % (nodes.len() as i64 - 1);
     if p < 0 {
         p = nodes.len() as i64 - 1 + p;
     }
